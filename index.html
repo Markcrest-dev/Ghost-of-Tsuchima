@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Persona</title>
+    <title>Ghost of Tsushima</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -13,16 +13,16 @@
 <body onload="homePage()">
     <div class="container" style="padding-top: 150px;" >
         <div id="home" class="home">
-            <form>
-                <h1 style="color:#000; font-size: 5em;"> GHOST </h1>
-                <h4 style="color:#fff;"> Ghost of Tsushima</h4>
-                <div class="input">
-                    <input type="text" placeholder="Search.." name="search">
-                    <button type="submit">Search</button>
+            <form onsubmit="handleSearch(event)">
+                <h1 style="font-size: 5em;"> GHOST </h1>
+                <h4>of Tsushima</h4>
+             <div class="input">
+                    <input type="text" placeholder="Search.." name="search" id="searchInput">
+                    <button type="submit" id="searchButton">Search</button>
                 </div>
                 <div style="margin-top: 3%;">
-                    <span style="color: #fff; font-size: 2em;" onclick="showAbout()">About us</span>
-                    <span style="color: #fff; font-size: 2em;" onclick="showServices()">Services</span>
+                    <span style="font-size: 2em; color: firebrick;" onclick="showAbout()"> <b>About us</b> </span>
+                    <span style="font-size: 2em; color: firebrick;" onclick="showServices()"> <b>Services</b> </span>
                 </div>
                 <div class="img-div">
                     <a href="https://www.google.com/"> <img style="padding: 4%;" src="image/image1.png" alt=""> </a>
@@ -36,9 +36,9 @@
     <div class="container">
         <div id="services" class="servies" style="display: none;">
             <div>
-                 <button type="reset" style="margin-right: 1000px;" onclick="homePage()">&times;</i>
+                 <button type="reset" style="margin-right: 1000px;" onclick="homePage()">&lt;</i>
                  </button>
-                 <h1 style="padding: 4%; color: #fff;"> Services </h1>
+                 <h1 style="padding: 4%;"> Services </h1>
             </div>
            
             <div class="row">
@@ -90,13 +90,13 @@
         </div>
         <div class="container">
             <div id="about_us" class="about">
-                <div>
-                    <button type="reset" style="margin-right: 1000px;" onclick="homePage()">&times;</i>
+                <span>
+                    <button type="reset" style="margin-right: 1000px;" onclick="homePage()">&lt;</i>
                     </button>
-                    <h1 style="padding: 4%; color: #fff;"> Services </h1>
-               </div>
+                    <h1 style="padding: 0 4%; color: firebrick;"> About us </h1>
+                </span>
                 <div class="row">
-                    <div class="col-md-6" style="text-align: left; padding-left: 4%; color: #fff;">
+                    <div class="col-md-6" style="text-align: left; padding-left: 4%;">
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque at voluptatem corrupti, unde repellat magni vitae consectetur voluptas tenetur perspiciatis dicta iusto cum deserunt consequuntur provident. Cumque facilis officiis earum?
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, delectus. A commodi sint perferendis! Sequi veniam, quas temporibus illo velit blanditiis fugit cumque voluptatum, neque corporis ab cum iste. Cupiditate!
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur eveniet eos odio nisi veritatis autem maxime aliquam omnis doloremque ratione obcaecati quam sapiente iusto sint, saepe, alias odit. Maiores, beatae.
@@ -104,12 +104,12 @@
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, omnis. Odit, nesciunt beatae nostrum laudantium iure voluptates non veritatis aliquid recusandae, obcaecati dolore illum repellat earum velit tenetur laboriosam sint?
                     </div>
                     <div class="col-md-6 about" style="text-align: right; padding-right: 4%;">
-                        <label style="color:#fff; font-size: medium;"> Contacts</label>
-                        <p style="color: #fff;">Phone number: 09017562976 <div style="color: #fff; padding-left: 100px;">08164685389</div> </p>
-                        <label style="color:#fff; font-size: medium;"> Also contact us @</label>
+                        <label style="font-size: medium;"> Contacts</label>
+                        <p style="padding-left: 100px; color: firebrick;">Phone number: 08164685389</p>
+                        <label style="font-size: medium; padding-left: 100px;"> Also contact us @</label>
                         <p>
-                            <div style="color:#fff;">Gmail: johndoe@gmail.com</div>
-                            <div style="color:#fff;">Facebook: John Doe</div>
+                            <div>Gmail: johndoe@gmail.com</div>
+                            <div">Facebook: John Doe</div>
                         </p>
                     </div>
                     <div style="padding-top: 4%;">
