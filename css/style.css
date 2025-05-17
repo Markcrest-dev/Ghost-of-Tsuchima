@@ -29,37 +29,66 @@ form {
     margin: 4%;
 }
 
-.input {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.search-container {
+    width: 100%;
     max-width: 600px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
-.input input {
-    padding: 10px;
-    font-size: 17px;
-    border: 1px solid grey;
-    flex: 1;
-    background: #f1f1f1;
-    border-radius: 4px 0 0 4px;
+.search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.input button {
-    padding: 10px 20px;
-    background: #180001;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none;
+.search-icon {
+    position: absolute;
+    left: 15px;
+    color: #f1f1f1;
+    font-size: 18px;
+    pointer-events: none;
+}
+
+.search-wrapper input {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    font-size: 16px;
+    color: #f1f1f1;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.search-wrapper input::placeholder {
+    color: rgba(241, 241, 241, 0.7);
+}
+
+.search-btn {
+    /* padding: 15px 25px; */
+    background: linear-gradient(135deg, #3a0002 0%, #180001 100%);
+    color: #f1f1f1;
+    font-size: 16px;
+    border: none;
+    border-radius: 0 8px 8px 0;
     cursor: pointer;
-    border-radius: 0 4px 4px 0;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
 }
 
-.input button:hover {
-    background: #3a0002;
+.search-btn:hover {
+    background: linear-gradient(135deg, #4a0003 0%, #280002 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.search-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 span {
